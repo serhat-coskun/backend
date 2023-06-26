@@ -1,0 +1,48 @@
+
+1- Create an app: python3 manage.py startapp <appname>
+
+2- Add the app to INSTALLED_APPS list in the setup.py
+
+For the app named xyz: add xyz.apps.XyzConfig
+Note that xyz uses camel case this is the name of app config class in the xyz.apps file.
+
+
+3-  Note that we need 4 files for fully functional page service
+
+.. model.py : define db models
+.. views.py : using models.py and template.html services the page
+.. template.html : defines html to be rendered by views with data from models
+.. urls.py : connects a url to views.py view
+
+
+4- If we are developing a static web page, we do not need to use models
+
+
+5- Create a valid view using models.py and template html, following 3 techniqes:
+	.. function based, returns a rendered template
+	.. view class based
+	.. generic view class based
+
+6- Bind view with a url, in the myAppName/urls.py which we will create
+   Note we will use django.urls.path and need to import our views to access view   function or class.
+   
+   Using path(route, viewFunction or Class, name =<Name>)
+   route is a regular expression
+   while naming prefer names appName-name so that url name's does not clash
+
+7- Need to include app url.py into project url.py
+   Need django.urls.include
+   Using:
+
+
+   path("", include("appname.urls"))
+
+8- Project urls.py is a gateway to each apps urls.py
+
+
+
+
+
+
+
+
