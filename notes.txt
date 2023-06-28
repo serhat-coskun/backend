@@ -43,6 +43,46 @@ Note that xyz uses camel case this is the name of app config class in the xyz.ap
 
 
 
+NEW STUDY
+
+
+1- Do everyting necesary to setup the project
+	
+	
+	create a folder with project-name
+	create a envorinment python3 -m venv .venv
+	pip install django
+	django-admin startproject django_project
+
+2- Create a app to work on and repeat this to add more apps
+
+	Enter the project folder django_project to access manage.py
+	python3 manage.py startapp app_name
+	install app to the project by adding, app_name.apps.AppNameConfig to the setup.py INSTALLED_APPS
+	
+3- For the templates 
+
+	create template folder BASE_DIR/templates
+	in the setup.py, TEMPLATES add BASE_DIR/ "templates" to the DIR field
+
+
+4- Create urls for app
+
+	Create urls.py for the app
+	Import views and assign them to urls in url_pattern list using path(.)
+	Design the url here
+	Don't forget to give a name for future reverse(.) uses
+	In the project's url folder use write without and trail include(app_name.urls)
+		so that in the future any url added to app_name.urls will be reflected for the project
+
+
+5- For the primary cycle is create views, assign the url in urls.py, create models
+	
+	For example,
+	Create view boilerplate
+	Create url pattern and add to urls for the view
+	Create necessary model for the view
+	Implement the view using the request info, and database info
 
 
 
