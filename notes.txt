@@ -85,4 +85,10 @@ NEW STUDY
 	Implement the view using the request info, and database info
 
 
+TESTING WITH DATABASE
+
+In contrast with testing static pages, this requires unittest classes to use TestCase not SimpleTestCase
+Remember that to use test we write them to app_name.tests and call python3 manage.py test to run them
+There are unique constructs to be used for tests.
+
 
