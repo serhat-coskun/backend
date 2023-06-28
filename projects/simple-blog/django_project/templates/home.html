@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+
+{% comment " %}{% endcomment %}
+{% block content %}
+    <ul>
+        {% for pst in post_list %}
+            <li>
+                <div class = "post-entry">
+                    <h2><a href = "{{ pst.get_absolute_url }}">{{pst.title}}</a></h3>
+                    <p> {{pst.body}} </p>
+                    <p> {{pst.author | capfirst}} </p>
+                </div>
+            </li>
+        {% endfor %}
+        
+    </ul>
+{% endblock content %}
+
+

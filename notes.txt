@@ -92,3 +92,14 @@ Remember that to use test we write them to app_name.tests and call python3 manag
 There are unique constructs to be used for tests.
 
 
+Configuring Static Files
+
+1- Create a folder called static in the manage.py level
+2- Add the static file path to STATICFILES_DIRS
+3- Create static/css and write css files
+4- In the template load static
+5- link the stylesheet css/stylesheetname.css
+To load {% static 'css/base.css' %}" use this in href it resolves  
+
+
+
